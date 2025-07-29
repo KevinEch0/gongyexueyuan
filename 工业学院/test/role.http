@@ -1,0 +1,41 @@
+### 获取角色列表
+GET http://127.0.0.1:5000/roles/
+
+### 获取对应角色列表
+GET http://127.0.0.1:5000/roles/
+
+
+### 创建角色
+POST http://127.0.0.1:5000/roles/
+Content-Type: application/json
+
+{
+    "name": "超级管理员",
+    "desc": "全部权限"
+}
+
+### 删除角色
+DELETE http://127.0.0.1:5000/role/2/
+
+
+### 修改角色
+PUT http://127.0.0.1:5000/role/4/
+Content-Type: application/json
+
+{
+    "name": "超级管理员",
+    "desc": "全部权限访问"
+}
+
+
+### 给指定角色删除权限
+GET http://127.0.0.1:5000/role/4/1/
+
+
+### 给指定角色添加权限
+POST http://127.0.0.1:5000/role/1/
+Content-Type: application/json
+
+{
+    "mids": "1,11"
+}

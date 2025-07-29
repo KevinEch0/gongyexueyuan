@@ -1,0 +1,35 @@
+### 测试用户登录功能
+POST http://127.0.0.1:5000/user/login/
+Content-Type: application/json
+
+{
+    "name": "kevin",
+    "pwd": "12345"
+}
+
+### 测试用户注册功能
+POST http://127.0.0.1:5000/user/users/
+Content-Type: application/json
+
+{
+    "name": "xtk666888",
+    "pwd": "123",
+    "real_pwd": "123",
+    "role_id":1
+}
+
+### 测试获取菜单
+# GET http://127.0.0.1:5000/menu/menus/?type_=tree/
+GET http://127.0.0.1:5000/menu/menus/?user_id=1&type_=tree
+
+### 测试权限类表
+GET http://127.0.0.1:5000/menu/menus2/
+
+### 测试根据ID获取单个用户
+GET http://127.0.0.1:5000/user/user/1/
+
+### 测试获取用户列表
+GET http://127.0.0.1:5000/user/users/
+
+### 测试删除用户
+DELETE http://127.0.0.1:5000/user/user/222/
